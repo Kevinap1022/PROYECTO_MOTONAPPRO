@@ -1,0 +1,150 @@
+
+.contenedor-menu{
+    position:fixed;
+    
+}
+
+/* contenedor general */
+.contenedor_general_registro_mantenimiento_moto{
+    height: 100vh;
+    background: linear-gradient(to bottom, #222, rgb(46, 46, 46)) ;
+    color: #fff;
+    
+}
+
+/* flex del contenedor general */
+
+.contenedor_general_registro_mantenimiento_moto{
+
+    display: flex;
+    
+    flex-direction: column;
+    align-items:center; /* configura el main axis si es colum*/
+    justify-content: center; /* configura el  cross axis si es column  */
+}
+
+
+/* formulario del usuario  */
+
+.formulario_registro_mantenimiento_moto{
+    border:solid 1px #8888;
+    height: 35rem;
+    text-align: center;
+    padding: 0px 60px ;
+}
+
+
+/* propiedades del formulario */
+
+.formulario_registro_mantenimiento_moto{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+
+}
+
+.formulario_registro_mantenimiento_moto h3{
+    font-size: 23px;
+    text-shadow: 1px 1px 3px #fff;
+    padding:20px 0px;
+}
+
+.formulario_registro_mantenimiento_moto input{
+    width: 30rem;
+    padding:5px;
+    border-radius: 8px;
+    
+}
+
+/* estilos input */
+
+.formulario_registro_mantenimiento_moto input{
+    background:transparent;
+    border:none;
+    border-bottom: 3px  solid #888  ;
+    outline: none;
+    color: #fff;
+}
+
+.formulario_registro_mantenimiento_moto input::placeholder{
+    color:#888;
+
+}
+
+/* selectores */
+
+.formulario_registro_mantenimiento_moto select{
+    background:#666;
+    border:none;
+    border-radius: 10px;
+    padding:10px 10rem;
+    border-bottom: 3px  solid rgb(133, 133, 133)  ;
+    outline: none;
+    color: #fff;
+}
+/* textarea de descripcion */
+.formulario_registro_mantenimiento_moto textarea{
+    background: #777;
+    color: #000;
+    border:none;
+    border-radius:10px;
+    margin:10px 0px;
+    padding:10px 10px;
+
+
+}
+
+.formulario_registro_mantenimiento_moto textarea::placeholder{
+    color:#000;
+
+}
+.formulario_registro_mantenimiento_moto textarea:focus{
+    border:none;
+    outline: none;
+    box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.329) ;
+}
+
+
+
+
+
+
+
+/* botones de formulario */
+.botones_registro_mantenimiento_moto{
+    display: flex;
+    flex-direction: column;
+}
+.botones_registro_mantenimiento_moto button{
+   margin:10px 0px;
+   width: 30rem;
+   padding:8px 20px ;
+   border-radius: 8px;
+   background: #555 ;
+   outline:none;
+   border:none;
+   color:#999;
+   font-weight: 800;
+   cursor: pointer;
+}
+
+.botones_registro_mantenimiento_moto button:hover{
+    transform:scale(1.05);
+
+}
+
+#reseteo{
+    background-color: transparent;
+}
+
+
+
+/* H4 */
+
+.formulario_registro_mantenimiento_moto h4{
+    margin:20px 0px;
+
+
+}

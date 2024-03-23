@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina sobre el mantenimiento de motos">
+    <meta name="keywords" content="Moto,mantenimiento,seguimiento">
+    <meta name="author" content="KEVIN ARIAS">
+    <title>INICIO_MOTONAPPRO</title>
+    <script src="https://kit.fontawesome.com/24ce6da039.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/estilos/estilo_main.css">
+    <link rel="stylesheet" href="/estilos/estilos_registro_moto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="/imagenes/logosinfondo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/imagenes/logosinfondo.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<!-- clase del header  -->
+<header class="header">
+<!-- Menu de la pagina  -->
+    <nav class="contenedor-menu">
+        <div class="nombre">
+            <a href="/index.html">MotoNappPro</a>
+        </div>
+
+        <!-- opciones del menu -->
+        <div class="opciones-menu">
+
+        <!-- boton de menu responsive -->
+        <input type="checkbox" id="check"> <!-- palomita del check -->
+        <label for="check" class="checkbtn"><!-- icono label -->
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+            <ul class="ul-menu">
+                <li><a href="#NOSOTROS">Sobre Nosotros</a></li>
+                <li><a href="/formulario_registro.html">Registrate</a></li>
+                <li><a href="/index.html">Contactanos</a></li>
+                <li><a href="/formulario_login.html">Inicia Sesion</a></li>
+                
+            </ul>
+        
+        </div>
+
+    </nav>
+</header>
+
+<body>
+    <div class="contenedor_formulario_moto">
+
+        <form action="#" class="formulario_moto">
+
+            <h3>FORMULARIO DEL REGISTRO TU MOTO</h3>
+            <p>Aqui podras darnos ya todos tus datos de tu moto para que nosotros podamos trabajar con ellos. </p>
+            <img src="/imagenes/logosinfondo.png" alt="datos_moto">
+
+
+            <div class="marca_de_moto">
+                <h3>Escoja marca de moto</h3>
+                <div>
+                    <input type="radio" name="Moto" value="susuki" id="susuki" >
+                    <label for="susuki">Susuki</label>
+                    <input type="radio" name="Moto" value="yamaha" id="yamaha" >
+                    <label for="Yamaha">Yamaha</label>
+                    <input type="radio" name="Moto" value="kawasaki" id="kawasaki" >
+                    <label for="kawasaki">Kawasaki</label>
+                    <input type="radio" name="Moto" value="honda" id="honda" >
+                    <label for="honda">Honda</label>
+                    <input type="radio" name="Moto" value="AKT" id="AKT" >
+                    <label for="AKT">Yamaha</label>
+                </div>
+            </div>
+            <div class="escoger-cilindraje">
+                    <h3>Escoja cilindraje</h3>
+                    <select name="Cilindraje_seleccion" id="Cilindraje">
+                        <option value="bajo">0cc - 250cc</option>
+                        <option value="medio">250cc - 400cc</option>
+                        <option value="alto" selected>400cc - 600cc</option>
+                        <option value="personalizado">600cc en adelante</option>
+                    </select>
+            </div>
+
+            <div class="fecha-tecnomecanica">
+                <h3>Año de fabricación</h3>
+                <input type="date">
+                <h3>Tipo de motor </h3>
+                <select name="tecnomecanica" id="fecha_tecno">
+                    <option value="gasolina"> Gasolina</option>
+                    <option value="electrico">Electrico </option>
+
+                </select>
+                <h3>Tipo de transmision </h3>
+                <select name="sincronizacion" id="sincro_moto">
+                    <option value="manual"> Manual  </option>
+                    <option value="automatico"> automatica </option>
+                </select>
+
+                <h3>Fecha ultima revision tecnico-mecanica</h3>
+                <input type="date">
+
+            </div>
+
+
+    
+            <div class="Kilometraje-moto">
+                <h3>Diganos la cantidad de kilometros por año</h3>
+                <select name="KILOMETRAJE" id="cantidad_kilotraje">
+                    <option value="primero">entre 7.000 y 10.000</option>
+                    <option value="segundo">entre 10.000 y 25.000</option>
+                    <option value="tercero">entre 24.000 y 36.000</option>
+                </select>
+                <h3>Accesorio instalados </h3>
+                <select name="KILOMETRAJE" id="cantidad_kilotraje">
+                    <option value="primero">GPS</option>
+                    <option value="segundo">alarma</option>
+                    
+                </select>
+            </div>
+
+            <div class="Placa_seguro">
+                
+                <h3>Seguro</h3>
+                <input type="text" id="Placa" placeholder="Numero de Placa" >
+                <input type="text" placeholder="Numero de Poliza" >
+                <h3>fecha de vencimiento </h3>
+                <input id="fecha" type="date">
+            </div>
+
+            <div class="envio">
+                <button type="reset">Resetear campos</button>
+                <button type="submit">Enviar Datos</button>
+            </div>
+
+
+
+
+        </form>
+
+
+    </div>
+</body>
+</html>
