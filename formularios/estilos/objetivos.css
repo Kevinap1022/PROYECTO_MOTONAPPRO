@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box ;
+
+}
+
+.contenedor-menu{
+    position: relative;
+}
+
+body{
+    background: #001;
+}
+.contenedor-cajas-objetivos{
+
+    height: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    border: 1px solid #000;
+    color: #fff;
+
+
+}
+
+.contenedor-cajas-objetivos > div{
+    margin-top: 60px;
+    transition-property: transform;
+    transition-duration: .6s;
+}
+
+.contenedor-cajas-objetivos >div:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/*primera caja*/
+.primer-caja-objetivo{
+    width: 340px;
+    height: 440px;
+    border-radius: 10px ;
+    background: #111;
+    box-shadow: 0px 0px 10px 3px #ccc ;
+    
+}
+
+
+.texto-1-objetivo{
+    text-align: center;
+    margin: 10px 10px ;
+
+}
+.texto-1-objetivo p{
+    font-size: 14px;
+    margin-top: 20px;
+
+}
+
+
+.texto-1-objetivo h2{
+    color:rgb(63, 87, 160);
+}
+
+.primer-caja-objetivo img{
+    width: 18rem;
+    height: 12rem;
+    margin: 10px 26px;
+    border-radius: 10px;
+}
+
+
+
+/*segunda caja*/
+.segunda-caja-objetivo{
+    width: 340px;
+    height: 440px;
+    border-radius: 10px ;
+    background: #111;
+    box-shadow: 0px 0px 10px 3px #ccc ;
+}
+
+
+.texto-2-objetivo{
+    text-align: center;
+    margin: 10px 10px ;
+}
+
+.texto-2-objetivo h2{
+    color:rgb(63, 87, 160);
+
+}
+
+.texto-2-objetivo p{
+    font-size: 14px;
+    margin-top: 20px;
+
+}
+
+
+
+.segunda-caja-objetivo img{
+    width: 18rem;
+    height: 12rem;
+    margin: 10px 26px;
+    border-radius: 10px;
+    
+}
+
+
+/*tercera caja*/
+.tercera-caja-objetivo{
+    width: 340px;
+    height: 440px;
+    border-radius: 10px ;
+    background: #111;
+    box-shadow: 0px 0px 10px 3px #ccc ;
+}
+
+
+.texto-3-objetivo{
+    text-align: center;
+    margin: 10px 10px ;
+}
+
+.texto-3-objetivo p{
+    font-size: 14px;
+    margin-top: 20px;
+    
+}
+
+
+.texto-3-objetivo h2{
+    color:rgb(63, 87, 160);
+
+}
+
+
+.tercera-caja-objetivo img{
+    width: 18rem;
+    height: 12rem;
+    border-radius: 10px;
+    margin: 10px 26px;
+}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pagina sobre el mantenimiento de motos">
+    <meta name="keywords" content="Moto,mantenimiento,seguimiento">
+    <meta name="author" content="KEVIN ARIAS">
+    <title>FORMULARIO DE REGISTRO DEL MANTENIMIENTO DE UNA MOTO</title>
+    <script src="https://kit.fontawesome.com/24ce6da039.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos/estilo_main.css">
+    <link rel="stylesheet" href="estilos/formulario_registro_matenimiento_moto.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="imagenes/logosinfondo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagenes/logosinfondo.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+<!-- clase del header  -->
+<header class="header">
+<!-- Menu de la pagina  -->
+    <nav class="contenedor-menu">
+        <div class="nombre">
+            <a href="../index.html">MotoNappPro</a>
+        </div>
+
+        <!-- opciones del menu -->
+        <div class="opciones-menu">
+
+        <!-- boton de menu responsive -->
+        <input type="checkbox" id="check"> <!-- palomita del check -->
+        <label for="check" class="checkbtn"><!-- icono label -->
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+            <ul class="ul-menu">
+                <li><a href="#NOSOTROS">Sobre Nosotros</a></li>
+                <li><a href="formulario_registro.php">Registrate</a></li>
+                <li><a href="#Contactanos">Contactanos</a></li>
+                <li><a href="formulario_login.html">Inicia Sesion</a></li>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+
+<!-- body -->
+<body>
+    <!-- contenedor general del formulario de registro de mantenimiento de moto -->
+    <div class="contenedor_general_registro_mantenimiento_moto">
+        
+        <form class="formulario_registro_mantenimiento_moto" action="#">
+            <h3  style="font-size: 26px;"> Formulario Registro mantenimiento de moto</h3>
+            <input name="numero_ingreso" type="text" placeholder="Nombre de Usuario">
+            <div class="tipo_de_mantenimiento">
+            <h3>TIPO DE MANTENIMIENTO</h3>
+                <textarea  name="tipo_de_mantenimiento" id="tipo_de_mantenimiento" cols="30" rows="10" placeholder="especifique el tipo de mantenimiento "></textarea>
+                <div class="Kilometraje-moto">
+                    <h3>Diganos su kilometraje </h3>
+                    <input type="text" placeholder="Diganos su kilometraje">
+                    </select>
+                </div>
+            </div>
+            <textarea name="descripcion" cols="40" rows="30" placeholder="descripcion de moto"></textarea>
+            <div class="ultima_revision">
+                <input name="Fecha_salida"  type="date">
+            </div>
+            <h3>FECHA DE ULTIMO MANTENIMIENTO</h3>
+
+
+            <div class="botones_registro_mantenimiento_moto">
+                <button name="boton_registro_mantenimiento_moto" type="submit">ENVIAR</button>
+                <button name="reseteo_campos" id="reseteo" type="reset">Resetear campos</button>
+            </div>
+        </form>
+
+    </div>    
+
+</body>
+
+
+
+</html>

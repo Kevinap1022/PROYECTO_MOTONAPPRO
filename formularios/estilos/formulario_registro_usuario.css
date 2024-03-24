@@ -1,0 +1,233 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+ 
+    
+   
+}
+
+
+.contenedor-menu{
+    position:relative;
+
+    
+    
+}
+
+body{
+    background: linear-gradient(to bottom, #222, rgb(46, 46, 46)) ;
+    height:140vh;
+}
+
+/* contenedor general  */
+
+.contenedor-general-formulario{
+
+    height: calc(140vh- 90px);
+    overflow: auto;
+    
+
+}
+/* flex del contenedor general */
+.contenedor-general-formulario{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    
+
+
+
+
+}
+
+
+/* contenedor de formulario */
+.contenedor-formulario{
+    display: flex;
+    margin: 20px 0px;
+    flex-direction: column;
+    flex-grow: 1;
+    margin:40px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.39);
+    padding: 22px;
+    height:120vh;
+    
+    
+
+}
+
+/*cajas de contenedor formulario*/
+/*titulo*/
+.nombre-Registro{
+    text-align: center;
+    padding: 20px;
+    
+}
+.nombre-Registro h3{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    margin: 20px 0px;
+    text-shadow: 0px 0px 6px rgb(131, 131, 131) ;
+}
+
+.nombre-Registro span{
+    color: #fff;
+}
+.nombre-Registro span a{
+    text-decoration: none;
+    padding: 5px 10px ;
+    border-radius: 10px;
+    color: rgb(214, 214, 214) ; 
+    background: #888;
+    margin-left: 21px;
+    
+}
+
+/*inputs*/
+
+.caja-input{
+    margin:10px 0px;
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 3px solid #fff;
+    background: none;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+}
+.caja-input input{
+    border: none;
+    background: none;
+    outline: none;
+        color: rgb(214, 214, 214);
+    font-weight: 600;
+}
+.caja-input::placeholder{
+    padding-left: 6px;
+    color: rgb(214, 214, 214);
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+.caja-input:focus{
+    color:#fff;
+    border:1px solid  #fff;
+    box-shadow: 1px 1px 10px 2px #ccc;
+}
+
+
+
+
+
+/* CAJA CONDICIONES */
+
+.condiciones {
+    margin-top: 8px;
+    text-align: left;
+    color: #fff;
+    font-weight: 700;
+    
+}
+
+.condiciones label{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+/* campo de reseteo y envio */
+
+.reseteo_envio{
+    text-align: center;
+    margin:6px 0px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+/*registro*/
+.reseteo_envio input{
+    display: block;
+    margin: 10px 0px;
+    padding: 21px 50px;
+    border-radius: 13px  ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: rgb(214, 214, 214);
+    font-weight: 600;
+    background: #444444;
+    
+    
+}
+
+
+
+/*registro */
+
+.reseteo_envio input{
+    text-decoration: none;
+    margin: 21px 0px;
+    border: none;
+}
+
+.reseteo_envio input:hover{
+
+    transform: scale(1.02);
+    box-shadow:0px 0px 3px 2px #ccc ;
+}
+
+
+
+
+
+
+/*reseteo campos */
+
+    .reseteo_envio button{
+        margin: 10px 0px;
+        padding: 21px 50px;
+        border-radius: 13px  ;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 17px;
+        color: rgb(214, 214, 214);
+        font-weight: 600;
+        background: transparent;
+    }
+    .reseteo_envio button:hover{
+        color: #fff;
+    }
+
+/* estilos regreso a login  */
+
+.regreso_login{
+    text-align: center;
+    margin: 20px 0px ;
+
+}
+
+.regreso_login a{
+    text-decoration: none;
+    padding: 20px 30px ;
+    border-radius: 20px;
+    color: rgb(214, 214, 214) ; 
+    background: #888;
+}
+
+.regreso_login a:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(1px 1px 3px #fff);
+}
