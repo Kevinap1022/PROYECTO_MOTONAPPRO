@@ -47,9 +47,19 @@
 
 .formulario_usuario h3{
     font-size: 23px;
-    text-shadow: 1px 1px 3px #fff;
-    padding:20px 0px;
+    text-shadow: 1px 1px 3px #f7a0a0;
+    padding:10px 0px;
+
 }
+
+span a {
+    
+    text-transform: uppercase;
+}
+span a:hover{
+    text-decoration: underline;
+}
+
 
 .formulario_usuario input{
     width: 220px;
