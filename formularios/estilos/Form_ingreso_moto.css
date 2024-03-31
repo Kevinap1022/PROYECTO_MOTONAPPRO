@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.contenedor_general_ingreso_moto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background: linear-gradient(to bottom, #222, rgb(46, 46, 46)) ;
+    color: #fff;
+
+
+
+}
+
+
+.formulario_ingreso_moto{
+
+
+    border:solid 1px #8888;
+    height: 28rem;
+    text-align: center;
+    padding: 0px 80px ;
+
+
+}
+
+.formulario_ingreso_moto{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+
+/* propiedades */
+.formulario_ingreso_moto h3{
+    font-size: 23px;
+    text-shadow: 1px 1px 3px #fff;
+    padding:20px 0px;
+}
+
+.formulario_ingreso_moto > input{
+    width: 220px;
+    padding:5px;
+    border-radius: 8px;
+    
+}
+
+/* estilos input */
+
+.formulario_ingreso_moto > input{
+    background:transparent;
+    border:none;
+    border-bottom: 3px  solid #888  ;
+    outline: none;
+    color: #fff;
+    margin:10px 0px;
+}
+
+.formulario_ingreso_moto >  input::placeholder{
+    color:#888;
+
+}
+
+/* botones de formulario */
+.botones{
+    display: flex;
+    flex-direction: column;
+    margin:20px 0px;
+
+}
+
+.botones input{
+    padding:8px 20px ;
+    border-radius: 8px;
+    background: hwb(0 54% 46%) ;
+    outline:none;
+    border:none;
+    color:#303030;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.botones input:hover{
+    transform:scale(1.05);
+
+}

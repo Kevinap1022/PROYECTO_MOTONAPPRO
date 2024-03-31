@@ -1,6 +1,18 @@
+
+<?php
+    // requiere conexion para mostrar el error 
+    require "conexion.php";
+
+    $server = "localhost:3307";/* nombre servidor  */
+    $username = "root";
+    $password = "";
+    $database = "base_de_datos_motonapp"; /* debes cambiar el nombre de la base de datos  */
+    $enlace_moto = mysqli_connect($server, $username, $password, $database);
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,12 +61,12 @@
     </nav>
 </header>
 
-<body>
+    <body>
     <!-- contenedor general del formulario contacto -->
 
     <div class="contenedor_general_contacto">
 
-        <form class="formulario_contacto" action="#">
+        <form class="formulario_contacto" action="Form_Contactenos.php" method="post">
             <h3 name="Tit_Contactenos">FORMULARIO DE CONTACTO</h3>
             <input name="Correo" type="email" placeholder="Digite su correo">
             <input name="Nombre" type="text" placeholder="Digite su nombre">
@@ -64,14 +76,26 @@
                 <button name="boton_contactenos" type="submit">ENVIAR</button>
                 <button id="reseteo" type="reset">Resetear campos</button>
             </div>
-
-
         </form>
-
     </div>
-
-</body>
-
-
-
+    </body>
 </html>
+
+
+<?php 
+    if (isset ($_POST["boton_contactenos"])) {
+    $Correo = $_POST["Correo"];
+    $Nombre = $_POST["Nombre"];
+    $Asunto = $_POST["Asunto"];
+    $Mensaje = $_POST["Mensaje"];
+
+
+
+    $insertarDatos = "INSERT INTO contactenos VALUES('','$Correo','$Nombre','$Asunto','$Mensaje')";
+
+    $ejecutarInsertar = mysqli_query($enlace_moto, $insertarDatos);
+    echo "datos registrados correctamente ";
+}
+
+
+?>

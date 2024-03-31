@@ -1,6 +1,5 @@
 <?php
-/* condicion para decirle que no pueden haber espacios en blanco */
-/* si no estan vacios se agregaran a las tablas */
+
 require "conexion.php";
 
 $server = "localhost:3307";/* nombre servidor  */

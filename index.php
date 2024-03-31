@@ -63,6 +63,7 @@ if (isset ($_SESSION['user_id'])) {
                 <li><a href="formularios/formulario_registro.php">Registrate</a></li>
                 <li><a href="#Contactanos">Contactanos</a></li>
                 <li><a href="formularios/form_Usuario.php">Inicia Sesion</a></li>
+                
 
             </ul>
 
@@ -96,6 +97,9 @@ if (isset ($_SESSION['user_id'])) {
                 </h3>
 
                 <a href="formularios/formulario_registro.php">Registrate</a>
+                <a style="margin: 20px; background:#049;" href="formularios/Form_Ingreso_Moto.php">Ingresa a los datos de tu moto</a>
+                <a href="GenerarPDF.php"><input type="button" value="Imprimir PDF"></a>
+                <a href="GenerarPDF_TABLAS.php"><input type="button" value="TABLAS PDF"></a>
 
             </section>
 

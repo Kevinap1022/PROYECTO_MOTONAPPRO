@@ -83,7 +83,7 @@
 }
 
 
-/* textarea de descripcion */
+/*  descripcion de moto */
 .tipo_de_mantenimiento input{
     background: #777;
     color: #000;
@@ -91,7 +91,7 @@
     border-radius:10px;
     margin:10px 0px;
     padding:10px 10px;
-   
+
 
 
 }
@@ -140,16 +140,16 @@
 
 
 .botones_registro_mantenimiento_moto button{
-   margin:10px 0px;
-   width: 30rem;
-   padding:8px 20px ;
-   border-radius: 8px;
-   background: #555 ;
-   outline:none;
-   border:none;
-   color:#999;
-   font-weight: 800;
-   cursor: pointer;
+    margin:10px 0px;
+    width: 30rem;
+    padding:8px 20px ;
+    border-radius: 8px;
+    background: #555 ;
+    outline:none;
+    border:none;
+    color:#999;
+    font-weight: 800;
+    cursor: pointer;
 }
 
 .botones_registro_mantenimiento_moto button:hover{
@@ -163,9 +163,9 @@
 
 
 
-/* H4 */
+/* input */
 
-.botones_registro_mantenimiento_moto input{
+.botones_registro_mantenimiento_moto input[type="submit"]{
     margin:20px 0px;
     color: #888;
 
