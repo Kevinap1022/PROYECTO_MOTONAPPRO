@@ -187,13 +187,13 @@ if (isset ($_SESSION['user_id'])) {
                     <i class="fa-regular fa-paper-plane"></i>
 
                     <div class="titulo-suscrito"> <!-- titulo  de la seccion  -->
-                        <h2>Subscribe to receive updates!</h2>
+                        <h2>Suscribete para recibir mas informacion sobre nuestra app</h2>
                     </div>
 
                     <div class="formulario-correo"> <!-- input del formulario -->
 
                         <input type="text" placeholder="ENTER EMAIL ADDRESS">
-                        <button type="submit">NOTIFY ME!</button>
+                        <button type="submit">Notificame </button>
 
                     </div>
 
@@ -210,11 +210,11 @@ if (isset ($_SESSION['user_id'])) {
                     <div class="address"> <!-- caja de  direccion -->
                         <i class="fa-solid fa-map-location-dot"></i>
                         <div class="nombre-address">
-                            <h3>ADDRESS</h3>
+                            <h3>DIRECCION </h3>
                         </div>
 
                         <div class="texto-address"> <!-- texto de direccion -->
-                            <p>4923 Market Street Orlando FL</p>
+                            <p>Carrera 43 #32 34 Nor</p>
                         </div>
                     </div>
 
@@ -222,11 +222,11 @@ if (isset ($_SESSION['user_id'])) {
                         <i class="fa-solid fa-envelope"></i>
                         <div class="nombre-email"> <!-- texto de email -->
 
-                            <h3>EMAIL</h3>
+                            <h3>CORREO</h3>
                         </div>
 
                         <div class="texto-email"> <!-- texto del email -->
-                            <a>david.ap1022@gmail.com</a>
+                            <a>motonappro124@gmail.com</a>
                         </div>
                     </div>
 
@@ -234,10 +234,10 @@ if (isset ($_SESSION['user_id'])) {
                     <div class="phone"> <!-- caja de teleforno -->
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         <div class="nombre-phone"> <!-- el nombre del telefono -->
-                            <h3>PHONE</h3>
+                            <h3>TELEFONO</h3>
                         </div>
                         <div class="texto-phone"> <!-- texto dentro del telefono  -->
-                            <p>+57 31243543436</p>
+                            <p>+57 3114354336</p>
                         </div>
                     </div>
 
@@ -255,7 +255,7 @@ if (isset ($_SESSION['user_id'])) {
 
                     </div>
                     <div class="copy"> <!-- texto de copyright -->
-                        <h3>Copyright &copy; YOur Website 2023</h3>
+                        <h3>Copyright &copy; TU SITIO WEB 2024</h3>
                     </div>
 
                 </div>

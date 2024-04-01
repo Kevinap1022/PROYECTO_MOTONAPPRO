@@ -106,15 +106,14 @@ if (!empty ($POST['Nombre_usuario']) && !empty ($_POST['Contraseña'])) {
             <?php endif; ?>
 
 
-            <input name="Nombre_usuario" type="text" placeholder="Nombre de Usuario">
-            <input name="Contraseña" type="password" placeholder="Clave de usuario">
-            <input name="Email" type="email" placeholder="Digite email">
+            <input name="Nombre_usuario" type="text" required placeholder="Nombre de Usuario">
+            <input name="Contraseña" type="password" required placeholder="Clave de usuario">
+            <input name="Correo" type="email" required placeholder="Digite email">
 
             <div class="botones_usuario">
 
                 <input name="boton_usuario" type="submit" value="Iniciar Sesion">
                 <button id="reseteo" type="reset">Resetear campos</button>
-                <a href="Form_Registro_moto.php" name="redireccion_moto">Registra tu moto</a>
             </div>                
                 
 
@@ -129,7 +128,7 @@ if (!empty ($POST['Nombre_usuario']) && !empty ($_POST['Contraseña'])) {
     <script>
         // Función para redireccionar a index.html
         function redireccionar() {
-            window.location.href = "index.php";
+            window.location.href = "Form_Registro_moto.php";
         }
 
         // Al presionar el botón de inicio de sesión,

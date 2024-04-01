@@ -110,7 +110,7 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
 
             <div class="envio">
                 <button type="reset">Resetear campos</button>
-                <input name="Envio_datos_moto" value="Send" type="submit">
+                <input  name="Envio_datos_moto" type="submit" value="Enviar informacion" >
                 <a href="form_Registro_mantenimiento_Moto.php">Mantenimiento de Moto</a>
                 
             </div>
@@ -123,6 +123,21 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
 
 
     </div>
+
+    <script>
+        // Función para redireccionar a index.html
+        function redireccionar() {
+            window.location.href = "form_Registro_mantenimiento_Moto.php";
+        }
+
+        // Al presionar el botón de inicio de sesión,
+        // se ejecuta la función redireccionar()
+        document.querySelector("input[type='submit']").addEventListener("click", redireccionar);
+    </script>
+
+
+
+
 </body>
 
 </html>
