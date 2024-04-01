@@ -102,11 +102,6 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
             <div class="botones_registro_mantenimiento_moto">
                 <input name="boton_registro_mantenimiento_moto" value="Enviar" type="submit">
                 <button name="reseteo_campos" id="reseteo" type="reset">Resetear campos</button>
-<<<<<<< HEAD
-=======
-                <a  href="Form_Ingreso_Moto.php">Ingresa a los datos de tu moto</a>
-
->>>>>>> c9fdefd (cambios formulario)
             </div>
         </form>
 

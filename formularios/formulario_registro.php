@@ -76,11 +76,7 @@ $enlace = mysqli_connect($server, $username, $password, $database);
         <form name="base_de_datos_motonapp" class="contenedor-formulario" method="post"
             action="formulario_registro.php">
             <header class="nombre-Registro">
-<<<<<<< HEAD
                 <h3>Registrate</h3>
-=======
-                <h3>Registra tus datos aqui</h3>
->>>>>>> c9fdefd (cambios formulario)
                 <span>o<a href="form_Usuario.php">Inicia Sesion aqui</a></span>
             </header>
             <input name="Nombres" class="caja-input" type="text" placeholder="Nombres" required="">
@@ -100,19 +96,13 @@ $enlace = mysqli_connect($server, $username, $password, $database);
             </div>
 
             <div class="reseteo_envio">
-<<<<<<< HEAD
                 <input type="submit" name="registro" value="Registrarse">
-=======
                 <input  type="submit" name="registro" value="Registrar datos">
->>>>>>> c9fdefd (cambios formulario)
                 <button type="reset" class="caja-boton">Resetea campos</button>
             </div>
             <div class="regreso_login">
                 <a href="form_Usuario.php">Inicia Sesion aqui</a>
-<<<<<<< HEAD
-=======
                 <a href="../GenerarPDF_TABLAS.php"><input  type="button" value="IMPRIMIR TABLA PDF"></a>
->>>>>>> c9fdefd (cambios formulario)
             </div>
         </form>
 

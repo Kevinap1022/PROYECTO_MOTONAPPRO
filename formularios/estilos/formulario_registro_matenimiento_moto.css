@@ -152,8 +152,6 @@
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-=======
 .botones_registro_mantenimiento_moto a{
     margin:10px 0px;
     width: 30rem;
@@ -170,7 +168,6 @@
 
 
 
->>>>>>> c9fdefd (cambios formulario)
 .botones_registro_mantenimiento_moto button:hover{
     transform:scale(1.05);
 
