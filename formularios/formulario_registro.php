@@ -97,7 +97,6 @@ $enlace = mysqli_connect($server, $username, $password, $database);
 
             <div class="reseteo_envio">
                 <input type="submit" name="registro" value="Registrarse">
-                <input  type="submit" name="registro" value="Registrar datos">
                 <button type="reset" class="caja-boton">Resetea campos</button>
             </div>
             <div class="regreso_login">
