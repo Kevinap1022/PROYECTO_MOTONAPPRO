@@ -94,7 +94,11 @@ if (!empty ($POST['Nombre_usuario']) && !empty ($_POST['Contraseña'])) {
 
             <h3>INICIAR SESION</h3> <!-- TITULO -->
             <span style="transform:translateY(-21px);"> o <br> <a style="color: #fff;text-decoration:none;"
+<<<<<<< HEAD
                     href="formulario_registro.php">Sign up</a></span>
+=======
+                    href="formulario_registro.php">Registrate</a></span>
+>>>>>>> c9fdefd (cambios formulario)
 
             <!-- ahora tratemos de mandar este mensaje por pantalla, esto sera abajo en html -->
             <!-- si no esta vacio la variable message muestre message a traves de un parrafo  -->
@@ -110,14 +114,26 @@ if (!empty ($POST['Nombre_usuario']) && !empty ($_POST['Contraseña'])) {
             <input name="Email" type="email" placeholder="Digite email">
 
             <div class="botones_usuario">
+<<<<<<< HEAD
                 <input name="boton_usuario" type="submit" value="Iniciar Sesion">
                 <button id="reseteo" type="reset">Resetear campos</button>
                 <a href="Form_Registro_moto.php" name="redireccion_moto">Registra tu moto</a>
             </div>
+=======
+                <input  name="boton_usuario" type="submit" value="Iniciar Sesion">
+                
+                <button  id="reseteo" type="reset">Resetear campos</button>
+                <a  target="_blank" href="Form_Registro_moto.php" name="redireccion_moto">Registra tu moto</a>
+                
+
+            </div>
+
+>>>>>>> c9fdefd (cambios formulario)
         </form>
     </div>
 
 
+<<<<<<< HEAD
     <script>
         // Función para redireccionar a index.html
         function redireccionar() {
@@ -133,4 +149,9 @@ if (!empty ($POST['Nombre_usuario']) && !empty ($_POST['Contraseña'])) {
 
 
 
+=======
+
+
+</body>
+>>>>>>> c9fdefd (cambios formulario)
 </html>

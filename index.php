@@ -96,10 +96,16 @@ if (isset ($_SESSION['user_id'])) {
                     libertad qeu viene con el mundo de las motocicletas
                 </h3>
 
+<<<<<<< HEAD
                 <a href="formularios/formulario_registro.php">Registrate</a>
                 <a style="margin: 20px; background:#049;" href="formularios/Form_Ingreso_Moto.php">Ingresa a los datos de tu moto</a>
                 <a href="GenerarPDF.php"><input type="button" value="Imprimir PDF"></a>
                 <a href="GenerarPDF_TABLAS.php"><input type="button" value="TABLAS PDF"></a>
+=======
+                <a href="formularios/form_usuario.php">Iniciar sesion</a>
+                <a style="margin: 20px; background:#049;" href="formularios/formulario_registro.php">Registrate</a>
+                <a href="GenerarPDF.php"><input type="button" value="Imprimir PDF"></a>
+>>>>>>> c9fdefd (cambios formulario)
 
             </section>
 

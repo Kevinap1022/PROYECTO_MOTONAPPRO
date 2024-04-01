@@ -18,10 +18,18 @@ $misDatos = array(
             array('nombre' => 'Olga Lucia', 'apellido' => 'Perez Vilvoa', 'Nombre_usuario' => 'Olgaperez0101'),
             array('nombre' => 'Jhon Jairo', 'apellido' => 'Arias Guzman', 'Nombre_usuario' =>  'Jairo_aroas21'),
             array('nombre' => 'Hellen Joana', 'apellido' => 'Perez Carrazco', 'Nombre_usuario' =>  'Hellen21'),
+<<<<<<< HEAD
             array('nombre' => 'Jairo', 'apellido' => 'Guzman', 'Nombre_usuario' => 'JairoGarzon21'),
             array('nombre' => 'Jairo', 'apellido' => 'Guzman', 'Nombre_usuario' => 'JairoGarzon21'),
             array('nombre' => 'Jairo', 'apellido' => 'Guzman', 'Nombre_usuario' => 'JairoGarzon21'),
             array('nombre' => 'Jairo', 'apellido' => 'Guzman', 'Nombre_usuario' => 'JairoGarzon21'),
+=======
+            array('nombre' => 'PAULA', 'apellido' => 'CASTRO', 'Nombre_usuario' => 'PAUCASTRO24'),
+            array('nombre' => 'MAURICIO', 'apellido' => 'ROBLES', 'Nombre_usuario' => 'MAURICIOROBLES2'),
+            array('nombre' => 'ESTEBAN', 'apellido' => 'CALDERON', 'Nombre_usuario' => 'ESTEBAN99'),
+            array('nombre' => 'KEVIN', 'apellido' => 'ARIAS', 'Nombre_usuario' => 'KEVINARIAS'),
+            array('nombre' => 'SEBASTIAN', 'apellido' => 'SALGADO', 'Nombre_usuario' => 'SEBAS66'),
+>>>>>>> c9fdefd (cambios formulario)
 
             );
  

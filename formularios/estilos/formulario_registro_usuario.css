@@ -24,7 +24,11 @@ body{
 
 .contenedor-general-formulario{
 
+<<<<<<< HEAD
     height: calc(140vh- 90px);
+=======
+    height:160vh;
+>>>>>>> c9fdefd (cambios formulario)
     overflow: auto;
     
 
@@ -54,8 +58,13 @@ body{
     margin:40px 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.39);
+<<<<<<< HEAD
     padding: 22px;
     height:120vh;
+=======
+    padding: 40px 30px;
+    height:157vh;
+>>>>>>> c9fdefd (cambios formulario)
     
     
 
@@ -180,6 +189,11 @@ body{
     text-decoration: none;
     margin: 21px 0px;
     border: none;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c9fdefd (cambios formulario)
 }
 
 .reseteo_envio input:hover{
@@ -196,8 +210,14 @@ body{
 /*reseteo campos */
 
     .reseteo_envio button{
+<<<<<<< HEAD
         margin: 10px 0px;
         padding: 21px 50px;
+=======
+        display: block;
+        margin: 20px 10px;
+        padding: 4px 20px;
+>>>>>>> c9fdefd (cambios formulario)
         border-radius: 13px  ;
         border: none;
         outline: none;
@@ -205,7 +225,11 @@ body{
         font-size: 17px;
         color: rgb(214, 214, 214);
         font-weight: 600;
+<<<<<<< HEAD
         background: transparent;
+=======
+        background: #444444;
+>>>>>>> c9fdefd (cambios formulario)
     }
     .reseteo_envio button:hover{
         color: #fff;
