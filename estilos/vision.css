@@ -1,0 +1,91 @@
+.contenedor-general-vision{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #002 , #003) ;
+    height: 100vh;
+}
+
+body{
+    overflow: auto;
+}
+p::selection{
+    color: #888;
+    background:#000;
+}
+
+.caja-vision{
+    margin-top:120px;
+    overflow: auto;
+    box-shadow: 0.5px 0px 10px 4px rgb(155, 155, 155);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    backdrop-filter: blur(10px);
+    padding: 60px 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+.caja-vision h1{
+    width: 100%;
+    color: slateblue;
+    font-size: 34px;
+    text-align: center;    
+    letter-spacing: 1.1px;
+}
+
+.caja-vision p{
+    text-align: center;
+    width: 350px;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    padding-right:17px ;
+}
+
+.caja-vision img{
+    width:250px;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 386px;
+}
+
+.caja-vision div {
+    height: 50px;
+    width:100%;
+    align-self: flex-end;
+    position: relative;
+}
+
+.caja-vision div a{
+
+    background-color: slateblue;
+    border:none;
+    outline:none;
+    cursor: pointer;
+
+
+    
+}
+
+/*dimensiones boton*/
+.caja-vision div a{
+
+    position: absolute;
+    width: 100px;
+    padding:20px 90px 20px 40px;
+    left: 40%;
+    top: 20px;
+    font-size: 17px;
+    font-weight: 800;
+    border-radius: 14px;
+    text-decoration: none;
+
+}
+
+.caja-vision div a:hover{
+    transform: scale(1.1);
+    box-shadow:0px 0px 10px 1px #fff  ;
+
+}
