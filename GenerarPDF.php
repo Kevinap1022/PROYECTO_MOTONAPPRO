@@ -23,7 +23,7 @@ $pdf->SetFont('Arial','B',16);
 
 
       $pdf->Cell(60);
-      $pdf->Write(5,'Informe de Clientes ');
+      $pdf->Write(5,'MOTONAPPRO ');
       $pdf->Image('imagenes/logosinfondo.png' , 80 ,22, 35 , 38,'PNG', 'http://localhost/ProYECTO_MOTONAPPRO-master/formulario_registro.php');
         
 

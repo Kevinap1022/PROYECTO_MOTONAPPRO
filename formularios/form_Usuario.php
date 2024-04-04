@@ -124,7 +124,7 @@ if (!empty ($POST['Nombre_usuario']) && !empty ($_POST['Contraseña'])) {
     </div>
 
 
-
+<!-- codigo para enviar a formulario registra tu moto  -->
     <script>
         // Función para redireccionar a index.html
         function redireccionar() {
