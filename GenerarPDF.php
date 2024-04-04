@@ -37,9 +37,9 @@ $pdf->SetFont('Arial','B',16);
 
     // recorren consulta sql, adicionando los datos en esta sección 
 
-    $pdf->SetFont('Arial','B',12);
+    $pdf->SetFont('Arial','B',13);
     $pdf->Ln(40);
-    $pdf->Write(5,'Nombre');
+    $pdf->Write(5,'INTRODUCCION');
     $pdf->Ln(6);
     $pdf->Write(5,'Apellidos');
     $pdf->Ln(6);
