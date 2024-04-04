@@ -3,7 +3,7 @@
     position:fixed;
     
 }
-
+ 
 /* contenedor general */
 .contenedor_general_usuario{
     height: 100vh;
@@ -52,11 +52,15 @@
 
 }
 
-span a {
-    
+.signup  {
     text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-shadow: 1px 1px 3px #f7a0a0;
+
 }
-span a:hover{
+.signup :hover{
     text-decoration: underline;
 }
 
@@ -140,4 +144,15 @@ span a:hover{
     transform:scale(1.05);
     
 
+}
+
+
+
+/* alerta del servidor  */
+.alerta{
+    text-align: center;
+    background: #9005;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
 }

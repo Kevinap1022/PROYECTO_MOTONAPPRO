@@ -1,27 +1,6 @@
-<?php
-
-require "formularios/conexion.php";
-
-/* si existe isset session vamos a mandarlo a traves  de user id */
-if (isset ($_SESSION['user_id'])) {
-    // Hacemos consulta  al resto de los datos
-    $records = $conn->prepare('SELECT id,Nombre_usuario, Contraseña FROM usuarios WHERE id = :id');
-    $records->bindParam(':id', $_SESSION['user_id']);
-    $records->execute();
-    /* obtenemos resultado y almacenamos en result */
-    $results = $records->fetch(PDO::FETCH_ASSOC);
-    $user = null;
-
-    if (count($results) > 0) {
-        $user = $results;
-    }
-}
-?>
-
-
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -76,13 +55,6 @@ if (isset ($_SESSION['user_id'])) {
 
 <body>
 
-    <?php if (!empty ($user)): ?>
-        <br>Welcome.
-        <?= $user['Email'] ?>
-        <br> You are succesfully Logged In
-        <a href="formularios/logout.php">Logout</a>
-
-    <?php else: ?>
 
 
         <!-- Contenedor general -->
@@ -123,7 +95,7 @@ if (isset ($_SESSION['user_id'])) {
                         </li>
                         <li class="nosotros_botones_ul__li"><a href="formularios/requerimientos.html">REQUERIMIENTOS</a>
                         </li>
-                        <li class="nosotros_botones_ul__li"><a href="GenerarPDF.php"><input style="background:transparent;border:none; "  type="button" value="IMPRIMIR INTRODUCCIÓN PDF"></a>
+                        <li class="nosotros_botones_ul__li"><a href="GenerarPDF.php"><input style="background:transparent;border:none; "  type="button" value="IMPRIMIR PDF"></a>
 
                         </li>
                     </ul>
@@ -271,8 +243,6 @@ if (isset ($_SESSION['user_id'])) {
 
 
 
-
-    <?php endif; ?>
 </body>
 
 </html>

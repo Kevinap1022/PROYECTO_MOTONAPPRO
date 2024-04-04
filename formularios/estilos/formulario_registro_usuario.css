@@ -230,3 +230,15 @@ body{
 .regreso_login a:hover{
     filter: drop-shadow(1px 1px 3px #fff);
 }
+
+    /* formulario backend */
+    .alerta{
+        color: #900;
+        text-align: center;
+    }
+    
+    .success{
+        text-align: center;
+        color: rgb(6, 234, 51);
+    }
+    

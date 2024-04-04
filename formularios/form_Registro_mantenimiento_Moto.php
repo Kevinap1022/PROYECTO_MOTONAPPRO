@@ -1,5 +1,5 @@
 <?php
-require "conexion.php";
+
 $server = "localhost:3307";/* nombre servidor  */
 $username = "root";
 $password = "";

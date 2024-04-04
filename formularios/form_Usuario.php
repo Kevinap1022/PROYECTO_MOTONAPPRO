@@ -1,40 +1,3 @@
-<?php
-
-/* las variables de sesion se necesitan inicializar mediante el siguiente metodo  */
-
-session_start();/* funciona para comprobar si esta guardada o no  */
-/* requerimos conexion  */
-require 'conexion.php';
-
-/* && = y */
-/* si las variables que se mandan a traves de _POST no estan vacios pues comprobemos  */
-if (!empty ($POST['Nombre_usuario']) && !empty ($_POST['Contraseña'])) {
-    /* ejecutamos una consulta si no estan vacios */
-    /* lo hacemos con la conexion $conn */
-    $records = $conn->prepare('SELECT id, Nombre_usuario, Contraseña FROM usuarios WHERE Nombre_usuario=:Nombre_usuario');
-    /* reemplazamos parametro Nombre_usuario por lo que nos esta enviando a traves del metodo POST */
-    $records->bindParam(':Nombre_usuario', $_POST['Nombre_usuario']); /* post recibe a email */
-    /* lo ejecutamos */
-    $records->execute();
-    /* vamos a obtener datos del usuario con la variable result */
-    $results = $records->fetch(PDO::FETCH_ASSOC);
-
-    /* si ha ocurrido un error el error lo asignamos aqui  */
-    $message = '';
-    /* verifica si es correcta la informacion enviada  */
-    /* si la respuesta no esta vacia vamos a verificar contraseñas, comparamos tambien contraseña que me da el usuario con el de la base de datos   */
-    if (count($results) > 0 && password_verify($_POST['Contraseña'], $results['Contraseña'])) {
-        /* si se valido que la contraseña es correcta , lo asignaremos en memoria   */
-        $_SESSION['user_id'] = $results['id'];/* almacenamos id */
-        /*  cuando tenga el id vamos a redireccionar al usuario */
-        header('Location:  /index.php');
-    } else {
-        /* si la contraseña no es correcta mandamos lo siguiente */
-        $message = 'Sorry, Those credentials dont match  ';
-        /* ahora tratemos de mandar este mensaje por pantalla, esto sera abajo en html */
-    }
-}
-?>
 
 
 <!DOCTYPE html>
@@ -92,23 +55,18 @@ if (!empty ($POST['Nombre_usuario']) && !empty ($_POST['Contraseña'])) {
     <div class="contenedor_general_usuario">
         <form class="formulario_usuario" method="POST" action="form_Usuario.php"><!-- formulario -->
 
-            <h3>INICIAR SESION</h3> <!-- TITULO -->
-            <span style="transform:translateY(-21px);"> o <br> <a style="color: #fff;text-decoration:none;"
-                    href="formulario_registro.php">Sign up</a></span>
+            <h3 style="transform:translateY(30px);">INICIAR SESION</h3> <!-- TITULO -->
+            <a class="signup" href="formulario_registro.php">OR SIGN UP</a>
+            <?php 
+            include("modelo/conexion.php");
+            include("controlador/controlador_login.php");
+            ?>
 
 
-            <!-- ahora tratemos de mandar este mensaje por pantalla, esto sera abajo en html -->
-            <!-- si no esta vacio la variable message muestre message a traves de un parrafo  -->
-            <?php if (!empty ($message)): ?>
-                <p style="color:aqua;">
-                    <?= $message ?>
-                </p>
-            <?php endif; ?>
 
-
-            <input name="Nombre_usuario" type="text" required placeholder="Nombre de Usuario">
-            <input name="Contraseña" type="password" required placeholder="Clave de usuario">
-            <input name="Correo" type="email" required placeholder="Digite email">
+            <!-- DENTRO DE ESTOS CAMPOS INTRODUCIMOS Y ENVIAMOS DATOS  -->
+            <input name="usuario" type="text"  placeholder="Nombre de Usuario">
+            <input name="contraseña" type="password"  placeholder="Clave de usuario">
 
             <div class="botones_usuario">
 
@@ -118,13 +76,11 @@ if (!empty ($POST['Nombre_usuario']) && !empty ($_POST['Contraseña'])) {
                 
 
             </div>
-
-
         </form>
     </div>
 
 
-<!-- codigo para enviar a formulario registra tu moto  -->
+<!-- codigo para enviar a formulario registra tu moto 
     <script>
         // Función para redireccionar a index.html
         function redireccionar() {
@@ -135,7 +91,7 @@ if (!empty ($POST['Nombre_usuario']) && !empty ($_POST['Contraseña'])) {
         // se ejecuta la función redireccionar()
         document.querySelector("input[type='submit']").addEventListener("click", redireccionar);
     </script>
-
+-->
 </body>
 
 

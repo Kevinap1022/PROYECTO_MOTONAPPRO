@@ -1,23 +1,6 @@
-<?php
-
-require "conexion.php";
-
-$server = "localhost:3307";/* nombre servidor  */
-$username = "root";
-$password = "";
-$database = "base_de_datos_motonapp"; /* debes cambiar el nombre de la base de datos  */
-$enlace = mysqli_connect($server, $username, $password, $database);
-
-?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,10 +22,6 @@ $enlace = mysqli_connect($server, $username, $password, $database);
 </head>
 <!-- clase del header  -->
 <header class="header">
-    <!-- requiriendo -->
-    <?php
-    require "conexion.php";
-    ?>
 
 
     <!-- Menu de la pagina  -->
@@ -77,16 +56,21 @@ $enlace = mysqli_connect($server, $username, $password, $database);
             action="formulario_registro.php">
             <header class="nombre-Registro">
                 <h3>Registrate</h3>
-                <span>o<a href="form_Usuario.php">Inicia Sesion aqui</a></span>
+            <?php
+
+            include("modelo/conexion.php");
+            include("controlador/controlador_registrar_usuario.php");
+
+            ?>
+
             </header>
-            <input name="Nombres" class="caja-input" type="text" placeholder="Nombres" required="">
-            <input name="Apellidos" class="caja-input" type="text" required="" placeholder="Digite su apellido">
-            <input name="Nombre_usuario" class="caja-input" type="text" required="" placeholder="Nombre de usuario">
-            <input name="Correo" class="caja-input" type="email" required="" placeholder="Direccion de correo electronico">
-            <input name="Celular" class="caja-input" type="text" placeholder="Escriba su numero">
-            <input name="Direccion" class="caja-input" type="text" placeholder="Digite su direccion">
-            <input name="Contraseña" class="caja-input" type="password" required placeholder="contraseña">
-            <input name="confirmar_contraseña" class="caja-input" type="password" placeholder="Confirma Contraseña">
+            <input name="nombre" class="caja-input" type="text" placeholder="Nombres" >
+            <input name="apellido" class="caja-input" type="text"  placeholder="Digite su apellido">
+            <input name="usuario" class="caja-input" type="text"  placeholder="Nombre de usuario">
+            <input name="correo" class="caja-input" type="email"  placeholder="Direccion de correo electronico">
+            <input name="celular" class="caja-input" type="text" placeholder="Escriba su numero">
+            <input name="direccion" class="caja-input" type="text" placeholder="Digite su direccion">
+            <input name="contraseña" class="caja-input" type="password"  placeholder="contraseña">
 
             <div class="condiciones">
                 <input type="checkbox" id="condicion">
@@ -96,7 +80,9 @@ $enlace = mysqli_connect($server, $username, $password, $database);
             </div>
 
             <div class="reseteo_envio">
-                <input type="submit" name="registro" value="Registrarse">
+
+                <input type="submit" name="registro" value="Registrate aqui">
+
                 <button type="reset" class="caja-boton">Resetea campos</button>
             </div>
             <div class="regreso_login">
@@ -113,22 +99,3 @@ $enlace = mysqli_connect($server, $username, $password, $database);
 
 </html>
 
-<?php
-if (isset ($_POST["registro"])) {
-    $nombre = $_POST["Nombres"];
-    $apellido = $_POST["Apellidos"];
-    $nombreusuario = $_POST["Nombre_usuario"];
-    $correo = $_POST["Correo"];
-    $celular = $_POST["Celular"];
-    $Direccion = $_POST["Direccion"];
-    $Contraseña = $_POST["Contraseña"];
-
-
-    $insertarDatos = "INSERT INTO usuarios VALUES('','$nombre','$apellido','$nombreusuario','$correo','$celular','$Direccion','$Contraseña')";
-
-    $ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
-    echo "Inicio de sesion satisfactorio";
-}
-
-
-?>

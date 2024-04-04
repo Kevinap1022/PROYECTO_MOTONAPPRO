@@ -20,6 +20,7 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
     <meta name="keywords" content="Moto,mantenimiento,seguimiento">
     <meta name="author" content="KEVIN ARIAS">
     <title>FORMULARIO_REGISTRO_MOTO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/24ce6da039.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilos/estilo_main.css">
     <link rel="stylesheet" href="estilos/estilos_registro_moto.css">
@@ -63,16 +64,19 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
 </header>
 
 <body>
-    <div class="contenedor_formulario_moto">
 
-        <form action="Form_Registro_moto.php" method="post" class="formulario_moto">
+<div class="contenedor_formulario_moto">
+<form action="Form_Registro_moto.php" method="post" class="formulario_moto">
 
-            <h3>FORMULARIO DEL REGISTRO TU MOTO</h3>
+        <div class="primer_gran_caja">
+            <h3>REGISTRA TU MOTO AQUI</h3>
             <p>Aqui podras darnos ya todos tus datos de tu moto para que nosotros podamos trabajar con ellos. </p>
             <img src="../imagenes/logosinfondo.png" alt="datos_moto">
+        </div>
+            
 
-
-            <div class="marca_de_moto">
+        <div class="segunda_gran_caja">
+        <div class="marca_de_moto">
                 <label for="marca">Dinos la marca de tu moto</label>
                 <input id="marca" name="marca_moto" type=" text">
                 <label for="modelo">Dinos el modelo de su moto</label>
@@ -80,25 +84,21 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
                 <label for="cilindraje">cilindraje</label>
                 <input id="cilindraje" name="cilindraje_moto" type="text">
             </div>
-
             <div class="fecha-tecnomecanica">
                 <h3>Año de fabricación</h3>
                 <input name="fecha_fabricacion" type="date">
                 <h3>Tipo de motor </h3>
 
                 <input name="tecnomecanica" type="text">
-
                 <h3>Tipo de transmision </h3>
                 <input name="sincronizacion" type="text">
 
                 <h3>Fecha ultima revision tecnico-mecanica</h3>
                 <input name="fecha_tecnomecanica" type="date">
-
             </div>
-
-
-
-
+        </div>
+            
+        <div class="tercera_gran_caja">
             <div class="Placa_seguro">
 
                 <h3>Seguro</h3>
@@ -111,36 +111,64 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
             <div class="envio">
                 <button type="reset">Resetear campos</button>
                 <input  name="Envio_datos_moto" type="submit" value="Enviar informacion" >
-                <a href="form_Registro_mantenimiento_Moto.php">Mantenimiento de Moto</a>
-                
+                <a href="form_Registro_mantenimiento_Moto.php">Mantenimiento de Moto</a>             
             </div>
+</div>
+        </form>   
 
 
 
 
-        </form>
+
+
+<table class="tabla">
+    <tr>
+        <th>ID</th>
+        <th>MARCA DE MOTO</th>
+        <th>Modelo Moto</th>
+        <th>cilindraje</th>
+        <th>Año de fabricacion </th>
+        <th>Tipo de Motor</th>
+        <th>Tipo de Transmision</th>
+        <th>fecha ultima revision tecnico-mecanica</th>
+        <th>Numero de placa</th>
+        <th>Numero de poliza </th>
+        <th>fecha vencimiento soat</th>
+    </tr>
+    <tr>
+    
+        <td>1</td>
+        <td>YAMAHA</td>
+        <td>1400</td>
+        <td>21/02/2024 </td>
+        <td>Manual</td>
+        <td>Manual</td>
+        <td>1/02/2023</td>
+        <td>323-REW</td>
+        <td>12324343424 </td>
+        <td>1/3/29</td>
+    </tr>
 
 
 
+
+
+</div> 
     </div>
 
-    <script>
-        // Función para redireccionar a index.html
-        function redireccionar() {
-            window.location.href = "form_Registro_mantenimiento_Moto.php";
-        }
-
-        // Al presionar el botón de inicio de sesión,
-        // se ejecuta la función redireccionar()
-        document.querySelector("input[type='submit']").addEventListener("click", redireccionar);
-    </script>
 
 
 
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+
+
 
 
 <?php
