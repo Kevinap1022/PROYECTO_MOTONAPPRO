@@ -123,7 +123,7 @@ if (isset ($_SESSION['user_id'])) {
                         </li>
                         <li class="nosotros_botones_ul__li"><a href="formularios/requerimientos.html">REQUERIMIENTOS</a>
                         </li>
-                        <li class="nosotros_botones_ul__li"><a href="GenerarPDF.php"><input style="background:transparent;border:none; "  type="button" value="IMPRIMIR TABLA PDF"></a>
+                        <li class="nosotros_botones_ul__li"><a href="GenerarPDF.php"><input style="background:transparent;border:none; "  type="button" value="IMPRIMIR INTRODUCCIÓN PDF"></a>
 
                         </li>
                     </ul>

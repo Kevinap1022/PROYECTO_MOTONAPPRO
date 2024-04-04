@@ -39,18 +39,25 @@ $pdf->SetFont('Arial','B',16);
 
     $pdf->SetFont('Arial','B',13);
     $pdf->Ln(40);
-    $pdf->Write(5,'INTRODUCCION');
+    $pdf->Write(5,'¿QUE ES?');
     $pdf->Ln(6);
-    $pdf->Write(5,'Apellidos');
+    $pdf->Write(5,'motonappro un acompañamiento integral y tecnológicamente avanzado para motociclistas de todas las categorías, desde aquellos que se inician en el mundo de las dos ruedas hasta los entusiastas experimentados');
     $pdf->Ln(6);
     $pdf->Write(5,'Nombre de Usuario');
     $pdf->Ln(6);
-    $pdf->Write(5,'correo');
-    $pdf->Write(5,'Celular');
+    $pdf->Write(5,'CARACTERISTICAS');
     $pdf->Ln(6);
-    $pdf->Write(5,'Direccion');
+    $pdf->Write(5,'Formulario de Registro: Este componente permite a los usuarios crear una cuenta en la plataforma, proporcionando la información necesaria para su identificación y autenticación en el sistema. Se incluyen medidas de seguridad para garantizar la integridad de los datos del usuario.');
     $pdf->Ln(6);
-    $pdf->Write(5,'Contraseña ');
+    $pdf->Write(5,'Formulario de Registro: Este componente permite a los usuarios crear una cuenta en la plataforma, proporcionando la información necesaria para su identificación y autenticación en el sistema. Se incluyen medidas de seguridad para garantizar la integridad de los datos del usuario.');
+    $pdf->Ln(6);
+    $pdf->Write(5,'Formulario de Inicio de Sesión: El formulario de inicio de sesión permite a los usuarios acceder de manera segura a sus cuentas registradas en la plataforma, utilizando credenciales previamente establecidas durante el proceso de registro.
+    ');
+    $pdf->Ln(6);
+    $pdf->Write(5,'Formulario de registrar tu moto: permite al usuario registrar los datos de su moto ');
+    $pdf->Ln(6);
+    $pdf->Write(5,'Formulario del mantenimiento de tu moto_ permite al usuario registrar datos legales de la moto ');
+
 
 
 $pdf->Output();
