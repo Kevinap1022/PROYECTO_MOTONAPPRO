@@ -82,7 +82,7 @@ $enlace = mysqli_connect($server, $username, $password, $database);
             <input name="Nombres" class="caja-input" type="text" placeholder="Nombres" required="">
             <input name="Apellidos" class="caja-input" type="text" required="" placeholder="Digite su apellido">
             <input name="Nombre_usuario" class="caja-input" type="text" required="" placeholder="Nombre de usuario">
-            <input name="Correo" class="caja-input" type="text" required="" placeholder="Direccion de correo electronico">
+            <input name="Correo" class="caja-input" type="email" required="" placeholder="Direccion de correo electronico">
             <input name="Celular" class="caja-input" type="text" placeholder="Escriba su numero">
             <input name="Direccion" class="caja-input" type="text" placeholder="Digite su direccion">
             <input name="Contraseña" class="caja-input" type="password" required placeholder="contraseña">
