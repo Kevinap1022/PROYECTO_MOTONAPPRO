@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3307
--- Tiempo de generación: 02-04-2024 a las 11:50:32
+-- Tiempo de generación: 06-04-2024 a las 03:36:54
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -118,15 +118,11 @@ CREATE TABLE `motos` (
 
 INSERT INTO `motos` (`id`, `marca_moto`, `modelo_moto`, `cilindraje_moto`, `fecha_fabricacion`, `tecnomecanica`, `sincronizacion`, `fecha_tecnomecanica`, `Placa`, `Numero_poliza`, `fecha_soat`) VALUES
 (1, 'Ferrari', 'zafiro', '300cc', '2024-03-07', 'Electrico ', 'cadena', '2024-03-08', '333 CCC', '35345435', '2024-03-07'),
-(2, 'Ferrari', 'zafiro', '300cc', '2024-03-14', 'Electrico ', 'cadena', '2024-03-29', '333 CCC', '35345435', '2023-07-07'),
-(3, 'Ferrari', 'zafiro', '300cc', '2024-03-14', 'Electrico ', 'cadena', '2024-03-29', '333 CCC', '35345435', '2023-07-07'),
-(4, '', '', '', '0000-00-00', '', '', '0000-00-00', '', '', '0000-00-00'),
-(5, 'yamaha', 'discovery', '343cc', '2024-04-18', 'gasolina', 'automatico', '2019-06-12', '213-EWQ', '2144364562', '2024-04-11'),
-(6, 'yamaha', 'discovery', '343cc', '2024-04-18', 'gasolina', 'automatico', '2019-06-12', '213-EWQ', '2144364562', '2024-04-11'),
-(7, 'yamaha', 'discovery', '343cc', '2024-04-18', 'gasolina', 'automatico', '2019-06-12', '213-EWQ', '2144364562', '2024-04-11'),
-(8, 'yamaha', 'discovery', '343cc', '2024-04-18', 'gasolina', 'automatico', '2019-06-12', '213-EWQ', '2144364562', '2024-04-11'),
-(9, 'yamaha', 'discovery', '343cc', '2024-04-18', 'gasolina', 'automatico', '2019-06-12', '213-EWQ', '2144364562', '2024-04-11'),
-(10, 'yamaha', 'discovery', '343cc', '2024-04-18', 'gasolina', 'automatico', '2019-06-12', '213-EWQ', '2144364562', '2024-04-11');
+(24, 'Toyota', 'Toyota 2100', '1200cc', '2024-04-09', 'Electrico ', 'cadena', '2023-11-07', '543 GAS', '341325435', '2023-07-05'),
+(48, 'Nissan', 'Honda', '600cc', '2024-01-23', 'Mecanico', 'cadena', '2024-01-25', '124 CCC', '76945745', '2024-01-17'),
+(49, 'Ferrari', 'zafiro', '300cc', '2024-03-07', 'Electrico ', 'cadena', '2024-03-08', '333 CCC', '35345435', '2024-03-07'),
+(50, 'Ferrari', 'zafiro', '300cc', '2024-03-07', 'Electrico ', 'cadena', '2024-03-08', '333 CCC', '35345435', '2024-03-07'),
+(51, 'Ferrari', 'zafiro', '300cc', '2024-03-07', 'Electrico ', 'cadena', '2024-03-08', '333 CCC', '35345435', '2024-03-07');
 
 -- --------------------------------------------------------
 
@@ -154,7 +150,7 @@ INSERT INTO `usuarios` (`id`, `Nombres`, `Apellidos`, `Nombre_usuario`, `Correo`
 (3, 'Jhon Jairo', 'Arias Guzman ', 'Jairo_arias21', 'Jairo_arias21@gmail.com', 2147483647, 'Cr 32 #34 sur ', '1234'),
 (4, 'Hellen Joana', 'Perez Carrasco', 'Hellen21', 'hellen21@gmail.com', 2147483647, 'cr 92 #34sur ', '1234'),
 (11, 'kevin arias ', 'david', 'KevinDavid_ap1022', 'kevindavid@gmail.com', 2147483647, 'cr 92 #34 sur', '1234'),
-(12, 'kevin arias ', 'david', 'KevinDavid_ap1022', 'kevindavid@gmail.com', 2147483647, 'cr 92 #34 sur', '1234');
+(13, 'Kevin', 'David', 'kevin_ap1022', 'david.ap23@gmail.com', 2147483647, 'Cr 43 #43 sur ', '1234');
 
 --
 -- Índices para tablas volcadas
@@ -216,13 +212,13 @@ ALTER TABLE `mantenimiento_moto`
 -- AUTO_INCREMENT de la tabla `motos`
 --
 ALTER TABLE `motos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
