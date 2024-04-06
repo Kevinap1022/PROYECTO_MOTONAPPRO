@@ -65,7 +65,7 @@
 
                 <h3>
                     Bienvenido a MotoNappPro.Tu Compañero de Viaje de ruedas en MotoNappPro .Entendemos la passion y la
-                    libertad qeu viene con el mundo de las motocicletas
+                    libertad que viene con el mundo de las motocicletas
                 </h3>
                 <a href="formularios/form_usuario.php">Iniciar sesion</a>
                 <a style="margin: 20px; background:#049;" href="formularios/formulario_registro.php">Registrate</a>
