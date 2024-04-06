@@ -54,7 +54,17 @@
 </header>
 
 <body>
-
+    <script>
+        function eliminar(){
+            var respuesta= confirm("¿Estas seguro que deseas eliminar?");
+            return respuesta
+        }
+    </script>
+<?php
+    /* primero se llama la conexion despues los  controladores  */
+    include "modelo/conexion.php";
+    include "controlador/eliminar_moto.php";
+?>
 <div class="contenedor_formulario_moto">
 <form action="Form_Registro_moto.php" method="post" class="formulario_moto">
 
@@ -62,7 +72,7 @@
             <h3>REGISTRA TU MOTO AQUI</h3>
             <?php
             
-            include "modelo/conexion.php";
+            /* include "modelo/conexion.php"; */
             include "controlador/registro_moto.php"
 
             ?>
@@ -115,8 +125,6 @@
     </form> 
 
 
-
-
 <div class="col-11 p-3">
 <table  class="table table-striped" >
 <thead class="table-dark">
@@ -134,11 +142,8 @@
         <th scope="col">Numero de poliza</th>
         <th scope="col">fecha vencimiento soat</th>
         <th scope="col"></th>
-
-        
-
-
     </tr>
+
 </thead>
 <tbody class="table-dark">
     <?php 
@@ -150,8 +155,7 @@
     /* mostramos los datos que tenemos pero aqui y el numero de registro que tenemos en la base de datos  */
     while($datos_motos= $sql_1->fetch_object()){ ?>
 
-    
-        <tr>
+    <tr>
         <th scope="row"><?= $datos_motos->id?></th>
         <td><?= $datos_motos->marca_moto?></td>
         <td><?= $datos_motos->modelo_moto?></td>
@@ -164,26 +168,23 @@
         <td><?= $datos_motos->Numero_poliza?></td>
         <td><?= $datos_motos->fecha_soat?></td>
         <td style="width:130px;" >
+        <!-- con el id nos vamos a comunicar entre forms -->
         <!-- nos envia a la vista de modificar producto pero tambien quiero que me envie un valor dentro de una variable Que sera un id  -->
             <a href="modificar_moto.php?id=<?= $datos_motos->id?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-            <a  href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
+            <!-- cuando presionemos el boton de eliminar el id se va a enviar a la url, este id lo controlamos en el controlador  -->
+            <!-- colocamos un javacript para mostrar un mensaje de advertencia si quiere o no eliminar el registro  -->
+            <a onclick="return eliminar()"  href="Form_Registro_moto.php?id=<?= $datos_motos->id?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
         </td>
     </tr>
-
-
     <?php  }
     ?>
 
 </tbody>
 </table>
-
 </div>
     </div>
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>
 
 

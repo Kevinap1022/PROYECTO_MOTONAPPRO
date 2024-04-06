@@ -13,7 +13,7 @@ if (!empty($_POST["Envio_datos_moto"])) {
         $sincronizacion= $_POST["sincronizacion"];
         $fecha_tecnomecanica = $_POST["fecha_tecnomecanica"];
         $Placa= $_POST["Placa"];
-        $Numero_Poliza= $_POST["Numero_Poliza"];
+        $Numero_Poliza= $_POST["Numero_Poliza"];     
         $fecha_soat= $_POST["fecha_soat"];
 
         /* modifar en base de datos, colocamos los nuevos valores en id(importante colocar where)  */
