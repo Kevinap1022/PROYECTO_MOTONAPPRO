@@ -1,13 +1,3 @@
-<?php
-
-$server = "localhost:3307";/* nombre servidor  */
-$username = "root";
-$password = "";
-$database = "base_de_datos_motonapp"; /* debes cambiar el nombre de la base de datos  */
-$enlace_moto = mysqli_connect($server, $username, $password, $database);
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +26,7 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
 <!-- clase del header  -->
 <header class="header">
     <!-- Menu de la pagina  -->
-    <nav class="contenedor-menu">
+    <nav class="contenedor-menu" style="position:relative;margin:0px 0px 100px 0px;">
         <div class="nombre">
             <a href="../index.php">MotoNappPro</a>
         </div>
@@ -70,6 +60,12 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
 
         <div class="primer_gran_caja">
             <h3>REGISTRA TU MOTO AQUI</h3>
+            <?php
+            
+            include "modelo/conexion.php";
+            include "controlador/registro_moto.php"
+
+            ?>
             <p>Aqui podras darnos ya todos tus datos de tu moto para que nosotros podamos trabajar con ellos. </p>
             <img src="../imagenes/logosinfondo.png" alt="datos_moto">
         </div>
@@ -110,56 +106,79 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
 
             <div class="envio">
                 <button type="reset">Resetear campos</button>
-                <input  name="Envio_datos_moto" type="submit" value="Enviar informacion" >
+
+                <button name="Envio_datos_moto" type="submit" value="Enviar informacion">Registrar moto</button>
+
                 <a href="form_Registro_mantenimiento_Moto.php">Mantenimiento de Moto</a>             
             </div>
-</div>
-        </form>   
+            </div>
+    </form> 
 
 
 
 
+<div class="col-11 p-3">
+<table  class="table table-striped" >
+<thead class="table-dark">
 
-
-<table class="tabla">
     <tr>
-        <th>ID</th>
-        <th>MARCA DE MOTO</th>
-        <th>Modelo Moto</th>
-        <th>cilindraje</th>
-        <th>Año de fabricacion </th>
-        <th>Tipo de Motor</th>
-        <th>Tipo de Transmision</th>
-        <th>fecha ultima revision tecnico-mecanica</th>
-        <th>Numero de placa</th>
-        <th>Numero de poliza </th>
-        <th>fecha vencimiento soat</th>
+        <th scope="col">ID</th>
+        <th scope="col">MARCA DE MOTO</th>
+        <th scope="col">Modelo Moto</th>
+        <th scope="col">cilindraje</th>
+        <th scope="col">Año de fabricacion</th>
+        <th scope="col">Tipo de Motor</th>
+        <th scope="col">Tipo de Transmision</th>
+        <th scope="col">fecha ultima revision tecnico-mecanica</th>
+        <th scope="col">Numero de placa</th>
+        <th scope="col">Numero de poliza</th>
+        <th scope="col">fecha vencimiento soat</th>
+        <th scope="col"></th>
+
+        
+
+
     </tr>
-    <tr>
+</thead>
+<tbody class="table-dark">
+    <?php 
     
-        <td>1</td>
-        <td>YAMAHA</td>
-        <td>1400</td>
-        <td>21/02/2024 </td>
-        <td>Manual</td>
-        <td>Manual</td>
-        <td>1/02/2023</td>
-        <td>323-REW</td>
-        <td>12324343424 </td>
-        <td>1/3/29</td>
+    include "modelo/conexion.php";
+    /* selecciona todo de la tabla motos  */    
+    $sql_1= $conexion->query("select * from motos ");
+    /* vamos a recorrer los datos  */
+    /* mostramos los datos que tenemos pero aqui y el numero de registro que tenemos en la base de datos  */
+    while($datos_motos= $sql_1->fetch_object()){ ?>
+
+    
+        <tr>
+        <th scope="row"><?= $datos_motos->id?></th>
+        <td><?= $datos_motos->marca_moto?></td>
+        <td><?= $datos_motos->modelo_moto?></td>
+        <td><?= $datos_motos->cilindraje_moto?></td>
+        <td><?= $datos_motos->fecha_fabricacion?></td>
+        <td><?= $datos_motos->tecnomecanica?></td>
+        <td><?= $datos_motos->sincronizacion?></td>
+        <td><?= $datos_motos->fecha_tecnomecanica?></td>
+        <td><?= $datos_motos->Placa?></td>
+        <td><?= $datos_motos->Numero_poliza?></td>
+        <td><?= $datos_motos->fecha_soat?></td>
+        <td style="width:130px;" >
+        <!-- nos envia a la vista de modificar producto pero tambien quiero que me envie un valor dentro de una variable Que sera un id  -->
+            <a href="modificar_moto.php?id=<?= $datos_motos->id?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+            <a  href="" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
+        </td>
     </tr>
 
 
+    <?php  }
+    ?>
 
+</tbody>
+</table>
 
-
-</div> 
+</div>
     </div>
-
-
-
-
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -171,26 +190,3 @@ $enlace_moto = mysqli_connect($server, $username, $password, $database);
 
 
 
-<?php
-if (isset ($_POST["Envio_datos_moto"])) {
-    $marca_moto = $_POST["marca_moto"];
-    $modelo_moto = $_POST["modelo_moto"];
-    $cilindraje_moto = $_POST["cilindraje_moto"];
-    $fecha_fabricacion = $_POST["fecha_fabricacion"];
-    $tecnomecanica = $_POST["tecnomecanica"];
-    $sincronizacion = $_POST["sincronizacion"];
-    $fecha_tecnomecanica = $_POST["fecha_tecnomecanica"];
-    $Placa = $_POST["Placa"];
-    $Numero_Poliza = $_POST["Numero_Poliza"];
-    $fecha_soat = $_POST["fecha_soat"];
-
-
-
-    $insertarDatos = "INSERT INTO motos VALUES('','$marca_moto','$modelo_moto','$cilindraje_moto','$fecha_fabricacion','$tecnomecanica','$sincronizacion','$fecha_tecnomecanica','$Placa','$Numero_Poliza','$fecha_soat')";
-
-    $ejecutarInsertar = mysqli_query($enlace_moto, $insertarDatos);
-    echo "Registro de moto exitoso";
-}
-
-
-?>
