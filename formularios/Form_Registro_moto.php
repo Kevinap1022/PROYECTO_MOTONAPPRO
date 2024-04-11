@@ -26,7 +26,7 @@
 <!-- clase del header  -->
 <header class="header">
     <!-- Menu de la pagina  -->
-    <nav class="contenedor-menu" style="position:relative;margin:0px 0px 100px 0px;">
+    <nav class="contenedor-menu" style="position:relative;margin:0px 0px 0px 0px;">
         <div class="nombre">
             <a href="../index.php">MotoNappPro</a>
         </div>
@@ -83,9 +83,9 @@
 
         <div class="segunda_gran_caja">
         <div class="marca_de_moto">
-                <label for="marca">Dinos la marca de tu moto</label>
+                <label for="marca">marca de tu moto</label>
                 <input id="marca" name="marca_moto" type=" text">
-                <label for="modelo">Dinos el modelo de su moto</label>
+                <label for="modelo"> modelo de su moto</label>
                 <input id="modelo" name="modelo_moto" type="text">
                 <label for="cilindraje">cilindraje</label>
                 <input id="cilindraje" name="cilindraje_moto" type="text">

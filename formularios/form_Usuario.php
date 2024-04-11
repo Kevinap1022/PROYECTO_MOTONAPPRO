@@ -56,7 +56,7 @@
         <form class="formulario_usuario" method="POST" action="form_Usuario.php"><!-- formulario -->
 
             <h3 style="transform:translateY(30px);">INICIAR SESION</h3> <!-- TITULO -->
-            <a class="signup" href="formulario_registro.php">OR SIGN UP</a>
+            <a class="signup" href="formulario_registro.php" style= "color:#fff;text-decoration:none;">OR SIGN UP</a>
             <?php 
             include("modelo/conexion.php");
             include("controlador/controlador_login.php");

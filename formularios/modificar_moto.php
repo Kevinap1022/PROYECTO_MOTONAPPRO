@@ -51,7 +51,7 @@ include "modelo/conexion.php";
     </nav>
 </header>
 <body>
-<form  method="POST" class="formulario_moto">
+<form  method="POST" class="formulario_moto" style="width:110%;">
 
 <div class="primer_gran_caja">
     <h3>Modificar Moto</h3>
@@ -71,10 +71,10 @@ include "modelo/conexion.php";
 
 <div class="segunda_gran_caja">
 <div class="marca_de_moto">
-        <label for="marca">Dinos la marca de tu moto</label>
+        <label for="marca">marca de tu moto</label>
         <!-- mostramos datos dentro d e value, es el valor del nombre de la tabla en la base de datos  -->
         <input id="marca" name="marca_moto" type=" text" value="<?= $datos_motos->marca_moto ?>">
-        <label for="modelo">Dinos el modelo de su moto</label>
+        <label for="modelo">modelo de su moto</label>
         <input id="modelo" name="modelo_moto" type="text" value="<?= $datos_motos->modelo_moto ?>">
         <label for="cilindraje">cilindraje</label>
         <input id="cilindraje" name="cilindraje_moto" type="text" value="<?= $datos_motos->cilindraje_moto ?>">
